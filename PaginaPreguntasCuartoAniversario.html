@@ -1,0 +1,79 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Formulario cuarto aniversario</title>
+<style type="text/css">
+form {
+margin: 0 auto;
+width: 800px;
+}
+
+.pregresp {
+border: 1px solid #7DA5E0;
+padding: 10px;
+margin: 10px;
+font-family: Arial, Verdana, Helvetica, sans-serif;
+font-size: 15px;
+font-weight: bold;
+}
+
+.pregunta {
+color: #7DA5E0;
+}
+
+.respuestas {
+color: #000000;
+}
+
+
+</style>
+
+
+</head>
+<body>
+<form action="" method="post" name="formu" id="formu">
+<div class="pregresp">
+  <div class="pregunta">1. ¿Crees que HTML es una buena tecnología?<br />
+  </div>
+  <div class="respuestas">
+    <input type="radio" name="preg1" value="1" /> Sí<br />
+    <input type="radio" name="preg1" value="2" /> No<br />
+    <input type="radio" name="preg1" value="3" /> Ns/Nc<br />
+  </div>
+</div>
+
+<div class="pregresp">
+  <div class="pregunta">2. ¿Crees que CSS es una buena tecnología?
+  </div>
+  <div class="respuestas">
+    <input type="radio" name="preg2" value="1" /> Sí<br />
+    <input type="radio" name="preg2" value="2" /> No<br />
+    <input type="radio" name="preg2" value="3" /> Ns/Nc<br />
+  </div>
+</div>
+
+<output type="hidden" id="resolucion" name="resolucion"> 
+
+<p><input type="button" value="Enviar" onclick="comprobarRespuesta()" /></p>
+
+
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+function comprobarRespuesta(){
+	//alert('hola');
+	var preg1 = document.formu.preg1.value;
+	//solucion = document.formu.resolucion;
+	//alert (preg1);
+	document.formu.resolucion.value="Esta sí es la solución";
+	document.formu.resolucion.type="text";
+}
+
+</script>
+
+
